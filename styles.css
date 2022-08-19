@@ -23,9 +23,10 @@ nav {
     padding: 0 24px;
     border-bottom: 1px solid var(--very--light-pink);
 }
-.menu{
+.menu-hamburguesa{
     display: none;
 }
+
 .logo{
     width: 100px;
 }
@@ -118,14 +119,61 @@ nav {
     margin-bottom: 20px;
     display: inline-block;
 }
+
+/*MENU MOBIL*/
+.mobile-menu{
+    position: absolute;
+    padding: 24px;
+    top: 50px;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+   /* margin-bottom: 24px;*/
+}
+.mobile-menu ul{
+    padding: 0;
+    margin-top: 24px 0 0;
+    list-style: none;
+}
+.mobile-menu ul:nth-child(1){
+    border-bottom: 1px solid var(--very--light-pink);
+}
+.mobile-menu ul li{
+    margin-bottom: 24px;
+}
+.email{
+    font-size: var(--sm);
+    font-weight: 300 !important;
+}
+.sing-out{
+    color: var(--Hospital-green) !important;   
+    font-size: var(--sm);   
+}
+.final{
+    position:unset;
+    bottom: 0;
+}
+
 @media (max-width: 640px) {
-    .menu{
+    .menu-hamburguesa{
         display: block;
     }
+    .desktop-menu{
+        display: none;
+    }
+    
     .navbar-left ul{
         display: none;
     }
     .email {
+        display: none;
+    }
+}
+
+@media (min-width: 641px){
+    .mobile-menu{
         display: none;
     }
 }

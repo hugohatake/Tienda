@@ -6,3 +6,12 @@ menuEmail.addEventListener('click', toggleDesktopMenu);
 function toggleDesktopMenu() {
     desktopMenu.classList.toggle('inactive');
 }
+
+const menuHam = document.querySelector(".menu-hamburguesa");
+const menuMob = document.querySelector(".mobile-menu");
+
+menuHam.addEventListener('click', toggleMenumob);
+
+function toggleMenumob() {
+    menuMob.classList.toggle('inactive');
+}
