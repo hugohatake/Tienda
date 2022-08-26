@@ -30,19 +30,26 @@ body{
     cursor: pointer;
 }
 #productDetail > img:nth-child(2) {
-    width: 100%;
+    width: 90%;
     height: 360px;
     object-fit: cover;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
+    margin: 5%;
+    
 }
 #productDetail{
-    margin: 24px 24px 0 24px;
+    margin: 0 10px;
+    border: none;
+}
+#productDetail p{
+    margin-left: 10px;
 }
 #productDetail p:nth-child(1){
     font-weight: bold;
     font-size: var(--md);
     margin-top: 0;
     margin-bottom: 4px;
+    color: var(--white);
 }
 #productDetail p:nth-child(2){
     color: var(--very--light-pink);
