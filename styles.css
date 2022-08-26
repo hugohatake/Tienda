@@ -1,7 +1,7 @@
 :root{
     --very--light-pink: #c7c7c7;
     --text-input-field: #f7f7f7;
-    --Hospital-green: #ACD9B2;
+    --Hospital-green: #fd18b8;
     --white: #FFFFFF;
     --black: #000000;
     --sm: 14px;
@@ -11,6 +11,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     margin: 0;
+    background-color: black;
 }
 
 .inactive{
@@ -25,10 +26,13 @@ nav {
 }
 .menu-hamburguesa{
     display: none;
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
 }
-
 .logo{
     width: 100px;
+    padding: 10px;
 }
 .navbar-left ul, .navbar-right ul{
     list-style: none;
@@ -47,14 +51,16 @@ nav {
 }
 .navbar-left ul li a, .navbar-right ul li a{
     text-decoration: none;
-    color: var(--very--light-pink);
-    border: 1px solid var(--white);
-    padding: 8px;
-    border-radius: 8px;
+    color: var(--Hospital-green);
+    border: 1px solid var(--Hospital-green);
+    padding: 10px;
+    border-radius: 10px;
+    margin:3px;
 }
 .navbar-left ul li a:hover, .navbar-right ul li a:hover{
-    border: 1px solid var(--Hospital-green);
-    color: var(--Hospital-green);
+    border: 1px solid var(--white);
+    color: var(--white);
+    
 }
 .navbar-email{
     cursor: pointer;
@@ -63,21 +69,26 @@ nav {
     margin-right: 12px;
 }
 .navbar-shopping-cart{
- position: relative;   
+ position: relative;  
+}
+.navbar-shopping-cart img{
+    width: 90px;
+    height: 50px;
 }
 .navbar-shopping-cart div{
-     width: 16px;
-     height: 16px;
+     width: 20px;
+     height: 20px;
      background-color: var(--Hospital-green);
      border-radius: 50%;
      font-size: var(--sm);
      font-weight: bold;
-    position: absolute;
-    top: -6px;
-    right: -3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+     position: absolute;
+     top: 3px;
+     right: 15px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #f7f7f7;
 }
 
  /*DESKTOP MENU*/
@@ -86,7 +97,7 @@ nav {
     position: absolute;
     top: 60px;
     right: 18px;
-    background: var(--white);
+    background: var(--black);
     width: 100px;
     height: auto;
     border: 1px solid var(--very--light-pink);
@@ -107,29 +118,31 @@ nav {
 }
 .desktop-menu ul li:last-child{
     padding-top: 20px;
-    border-top: 1px solid var(--very--light-pink);
+    border-top: 1px solid var(--white);
 }
 .desktop-menu ul li:last-child a{
     color: var(--Hospital-green);
     font-size: var(--sm);
 }
 .desktop-menu ul li a{
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
     margin-bottom: 20px;
     display: inline-block;
 }
 
 /*MENU MOBIL*/
+
 .mobile-menu{
-    background-color: var(--white);
+    background-color: var(--black);
     position: absolute;
     padding: 24px;
     top: 50px;
+    border: 1px solid var(--Hospital-green);
 }
 .mobile-menu a{
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
     font-weight: bold;
    /* margin-bottom: 24px;*/
 }
@@ -158,13 +171,15 @@ nav {
 }
 
 /*carrito*/
+
 .product-detail {
-    background-color: var(--white);
+    background-color: var(--black);
     width: 360px;
     padding: 0 24px 24px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    border: 2px solid var(--very--light-pink);
     }    
 .title-container{
     display: flex;
@@ -182,7 +197,7 @@ nav {
     grid-template-columns: auto 1fr;
     gap: 16px;
     align-items: center; 
-    background-color: var(--text-input-field);
+    background-color: var(--very--light-pink);
     margin-bottom: 24px;
     border-radius: 8px;
     padding: 0 24px;
@@ -216,11 +231,12 @@ nav {
  object-fit: cover;
 }
 .shopping-cart p:nth-child(2){
- color: var(--very--light-pink);
+ color: var(--white);
 }
 .shopping-cart p:nth-child(3){
  font-size: var(--md);
  font-weight: bold;
+ color: var(--white);
 }
 .primary-button{
     background-color: var(--Hospital-green);
@@ -234,6 +250,52 @@ nav {
     height: 50px;   
 }
 
+/*HOME*/
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 26px;
+    place-content: center;
+    margin-top: 20px;
+}
+.product-card{
+    width: 240px;
+}
+.product-card img{
+    width: 240px;
+    height: 240px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product-info{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 5px;
+}
+.product-info figure {
+    margin: 0; 
+}
+.product-info figure img{
+    width: 35px;
+    height: 35px; 
+}
+.product-info div p:nth-child(1){
+    font-weight: bold;
+     font-size: var(--md);
+     margin-top: 0;
+     margin-bottom: 4px;
+     color: var(--white);
+}
+.product-info div p:nth-child(2){
+    color: var(--very--light-pink);
+     font-size: var(--sm);
+     margin-top: 0;
+     margin-bottom: 0;
+}
+
+
+
 @media (max-width: 640px) {
     .menu-hamburguesa{
         display: block;
@@ -241,17 +303,26 @@ nav {
     .desktop-menu{
         display: none;
     }
-    
     .navbar-left ul{
         display: none;
     }
-    .email {
+    .navbar-email {
         display: none;
     }
-
     .product-detail {
         width: 100%;
+        border: none;
     }
+    .cards-container{
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+    .product-card{
+     width: 140px;
+}
+    .product-card img{
+     width: 140px;
+     height: 140px;
+}
 }
 
 @media (min-width: 641px){
