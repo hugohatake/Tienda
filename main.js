@@ -2,7 +2,7 @@
 const menuEmail = document.querySelector(".navbar-email");
 const menuDesktop = document.querySelector(".desktop-menu");
 const carritoIcon = document.querySelector(".navbar-shopping-cart");
-const menuCarrito =document.querySelector(".product-detail");
+const shopingCartContainer =document.querySelector("#shopingCartContainer");
 const cardsContainer =document.querySelector(".cards-container");
 const menuHam = document.querySelector(".menu-hamburguesa");
 const menuMob = document.querySelector(".mobile-menu");
@@ -13,10 +13,10 @@ menuHam.addEventListener('click', toggleMenumob);
 
 function toggleDesktopMenu() {
     //CERRAR CARRITO
-    const ismenuCarritoClosed = menuCarrito.classList.contains('inactive');
+    const ismenuCarritoClosed = shopingCartContainer.classList.contains('inactive');
     
     if(!ismenuCarritoClosed){
-    menuCarrito.classList.add('inactive');
+    shopingCartContainer.classList.add('inactive');
     }
 
     menuDesktop.classList.toggle('inactive');
@@ -32,16 +32,16 @@ function toggleCarritoAside() {
     menuMob.classList.add('inactive');
     }
 
-    menuCarrito.classList.toggle('inactive');
+    shopingCartContainer.classList.toggle('inactive');
 }
 
 /*Menu mobile*/
 function toggleMenumob() {
     //CERRAR CARRITO
-    const ismenuCarritoClosed = menuCarrito.classList.contains('inactive');
+    const ismenuCarritoClosed = shopingCartContainer.classList.contains('inactive');
     
     if(!ismenuCarritoClosed){
-    menuCarrito.classList.add('inactive');
+    shopingCartContainer.classList.add('inactive');
     }
 
     menuMob.classList.toggle('inactive');
@@ -89,8 +89,6 @@ function renderProducts(arr){
         const productImgCart = document.createElement('img');
         productImgCart.setAttribute('src', './icons/bt_add_to_cart.svg');
 
-        //insertar
-
         productInfoFigure.appendChild(productImgCart);
 
         productInfo.appendChild(productInfoDiv);
@@ -100,7 +98,6 @@ function renderProducts(arr){
         productCard.appendChild(productInfo);
 
         cardsContainer.appendChild(productCard);
-
     }
 }
 
