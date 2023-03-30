@@ -8,18 +8,27 @@ const menuHam = document.querySelector(".menu-hamburguesa");
 const menuMob = document.querySelector(".mobile-menu");
 const productDetailContainer = document.querySelector("#productDetail");
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
-const myorders = document.querySelector(".ordersjs");
-const myordersmobile = document.querySelector(".ordersjsmobile");
+const myordersmenu = document.querySelector(".ordersjs");
+const myorders = document.querySelector(".my-order");
+const maincontainer = document.querySelector(".main-container");
+const menuordersmob = document.querySelector(".ordersjsmobile");
+
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 carritoIcon.addEventListener('click', toggleCarritoAside);
 menuHam.addEventListener('click', toggleMenumob);
 productDetailCloseIcon.addEventListener('click',closeProductDetailAsaide);
-myorders.addEventListener('click',toggleOrders);
-myordersmobile.addEventListener('click',toggleOrdersmob);
+myordersmenu.addEventListener('click',toggleOrders);
+menuordersmob.addEventListener('click', toggleOrdersmob)
+
+function toggleOrdersmob(){
+    menuMob.classList.toggle('inactive');
+    myorders.classList.toggle('inactive');
+}
 
 function toggleOrders() {
     myorders.classList.toggle('inactive');
+    menuDesktop.classList.toggle('inactive');
 }
 
 function toggleDesktopMenu() {
@@ -64,10 +73,6 @@ function toggleMenumob() {
     closeProductDetailAsaide();
 
     menuMob.classList.toggle('inactive');
-}
-
-function toggleOrdersmob(){
-    myordersmobile.classList.toggle('inactive');
 }
 
 /*Detalles de producto*/

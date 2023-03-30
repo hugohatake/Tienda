@@ -393,7 +393,20 @@ aside {
      margin-top: 0;
      margin-bottom: 0;
 }
+/*MU ORDERS*/
 
+.ordersjs{
+    cursor: pointer;
+}
+
+.ordersjsmobile{
+    cursor: pointer;
+}
+
+.my-order{
+    padding-left: 20%;
+    padding-right: 20%;
+}
 
 
 @media (max-width: 640px) {
