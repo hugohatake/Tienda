@@ -8,12 +8,19 @@ const menuHam = document.querySelector(".menu-hamburguesa");
 const menuMob = document.querySelector(".mobile-menu");
 const productDetailContainer = document.querySelector("#productDetail");
 const productDetailCloseIcon = document.querySelector(".product-detail-close");
+const myorders = document.querySelector(".ordersjs");
+const myordersmobile = document.querySelector(".ordersjsmobile");
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 carritoIcon.addEventListener('click', toggleCarritoAside);
 menuHam.addEventListener('click', toggleMenumob);
 productDetailCloseIcon.addEventListener('click',closeProductDetailAsaide);
+myorders.addEventListener('click',toggleOrders);
+myordersmobile.addEventListener('click',toggleOrdersmob);
 
+function toggleOrders() {
+    myorders.classList.toggle('inactive');
+}
 
 function toggleDesktopMenu() {
     //CERRAR CARRITO
@@ -24,8 +31,8 @@ function toggleDesktopMenu() {
     }
 
     menuDesktop.classList.toggle('inactive');
-
 }
+
 /*CARRITO*/
 function toggleCarritoAside() {
     //CERRAR MENU MOBILE
@@ -57,6 +64,10 @@ function toggleMenumob() {
     closeProductDetailAsaide();
 
     menuMob.classList.toggle('inactive');
+}
+
+function toggleOrdersmob(){
+    myordersmobile.classList.toggle('inactive');
 }
 
 /*Detalles de producto*/
